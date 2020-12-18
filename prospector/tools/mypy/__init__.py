@@ -16,6 +16,7 @@ def format_message(message):
     except ValueError:
         (path, line, err_type, err_msg) = message.split(":", 3)
         character = None
+    print("tanishq dubey here")
     print("line", line)
     location = Location(path=path, module=None, function=None, line=int(line), character=character,)
     return Message(source="mypy", code=err_type.lstrip(" "), location=location, message=err_msg.lstrip(" "),)
